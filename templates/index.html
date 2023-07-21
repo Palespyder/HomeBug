@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bug Tracker</title>
+</head>
+<body>
+    <h1>Bug Tracker</h1>
+    <a href="{{ url_for('create_bug') }}">Create New Bug</a>
+    <ul>
+        {% for bug in bugs %}
+        <li>
+            <a href="{{ url_for('bug_details', id=bug.id) }}">{{ bug.title }}</a>
+            - {{ bug.status }} (Priority: {{ bug.priority }})
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

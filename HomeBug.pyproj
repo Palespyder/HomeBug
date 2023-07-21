@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e91411ba-f225-4e77-8faa-9cc0d00e604b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>HomeBug.py</StartupFile>
+    <StartupFile>app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HomeBug.py" />
+    <Compile Include="app.py" />
+    <Compile Include="models.py" />
+    <Compile Include="views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="static\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\bug_details.html" />
+    <Content Include="templates\create_bug.html" />
+    <Content Include="templates\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

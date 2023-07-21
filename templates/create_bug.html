@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Bug</title>
+</head>
+<body>
+    <h1>Create New Bug</h1>
+    <form method="post" action="{{ url_for('create_bug') }}">
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br>
+        <label>Description:</label><br>
+        <textarea name="description" required></textarea><br>
+        <label>Status:</label><br>
+        <select name="status">
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Closed">Closed</option>
+        </select><br>
+        <label>Priority:</label><br>
+        <input type="number" name="priority" min="1" max="5" value="1" required><br>
+        <input type="submit" value="Create Bug">
+    </form>
+</body>
+</html>
